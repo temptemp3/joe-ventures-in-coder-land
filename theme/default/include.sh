@@ -125,7 +125,11 @@ if-meta-robots() {
 #-------------------------------------------------
 get-document-info() {
  document['name']=$( basename ${file} )
- document['domain']=$( basename $( get-bloginfo-url ) )
+ test "$( get-bloginfo domain )" && {
+  document['domain']=$( get-bloginfo domain )
+ } || {
+  document['domain']=$( basename $( get-bloginfo-url ) )
+ }
 }
 #-------------------------------------------------
 get-document-meta-payload() {
