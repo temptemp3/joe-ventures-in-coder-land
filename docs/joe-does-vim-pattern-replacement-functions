@@ -1,0 +1,24 @@
+joe-does-vim-pattern-replacement-functions
+
+<!--
+[joe does vim pattern replacement functions](joe-does-vim-pattern-replacement-functions.html)
+-->
+
+******************************************************
+
+Joe wants to be able perform known pattern replacements in vim 13 Apr 2018
+
+He creates a function.
+
+<code><pre>
+:fun DoSearchandReplace()
+:call feedkeys(':%s/pattern/replacement/g','t')
+:call feedkeys("\<CR>") 
+:endf
+</pre></code>
+
+And life is good.
+
+20 Apr 2018
+
+******************************************************

@@ -371,9 +371,12 @@ deslugify() { { local text ; text="${@}" ; }
   -e 's/[-_]\+/ /g'
 }
 #-------------------------------------------------
+# to do:
+# - convert anchor text deslugging to a hook such 
+#   such that the default behavior remains
 a() { { local href ; href="${1}" ; local text ; text=${@:2} ; }
  cat << EOF
-<a href="${href}">${text}</a>
+<a href="${href}">$( echo ${text} | sed -e 's/-/ /g' )</a>
 EOF
 }
 #-------------------------------------------------
