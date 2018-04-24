@@ -1,0 +1,38 @@
+joe-does-word-vba-removing-colored-text-from-document
+
+<!--
+[joe does word vba removing colored text from document](joe-does-word-vba-removing-colored-text-from-document.html)
+-->
+
+******************************************************
+
+Joe must have way to remove text of any color from a Word Document using VBA 24 Apr 2018
+
+He creates Sub procedures.
+
+<code lang="vb"><pre>Sub テスト23() ' remove range text with font color index equal to <span class="w3-white">???</span> '
+Dim para As Paragraph
+Documents(1).Activate
+For Each para In ActiveDocument.Paragraphs
+With para
+If .Range.Font.ColorIndex = <span class="w3-pink">???</span> Then 
+ .Range.Text = ""
+End If
+End With
+Next para
+clearSelection
+End Sub
+</pre></code>
+
+He replaces <span class="w3-pink">???</span> with the output of another Sub procedure.
+
+<code lang="vb"><pre>Sub テスト25() ' inspect selection range font color index '
+MsgBox (selection.Range.Font.ColorIndex) ' tells you <span class="w3-white">???</span> '
+End Sub
+</pre></code>
+
+And life is good.
+
+24 Apr 2018
+
+******************************************************

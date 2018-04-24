@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>index | temptemp3.github.io/joe-ventures-in-coder-land</title>
+<title>joe does word vba removing colored text from document | temptemp3.github.io/joe-ventures-in-coder-land</title>
 
-<link rel="canonical" href="https://temptemp3.github.io/joe-ventures-in-coder-land/" />
+<link rel="canonical" href="https://temptemp3.github.io/joe-ventures-in-coder-land/joe-does-word-vba-removing-colored-text-from-document.html" />
 <link rel="stylesheet" href="css/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
@@ -35,23 +35,42 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <div class="w3-col l8 s12">
 <div class="w3-card-4 w3-margin w3-white">
 <div class="w3-container">
-<h1>index</h1>
+<h1>joe does word vba removing colored text from document</h1>
 
 <!--
-[index](index.html)
+[joe does word vba removing colored text from document](joe-does-word-vba-removing-colored-text-from-document.html)
 -->
 
 <hr />
 
-<p>Joe has a problem ...</p>
+<p>Joe must have way to remove text of any color from a Word Document using VBA 24 Apr 2018</p>
 
-<p>He {wants to, must have} ... </p>
+<p>He creates Sub procedures.</p>
 
-<p>So, he ventures into coder land ...</p>
+<p><code lang="vb"><pre>Sub テスト23() ' remove range text with font color index equal to <span class="w3-white">???</span> '
+Dim para As Paragraph
+Documents(1).Activate
+For Each para In ActiveDocument.Paragraphs
+With para
+If .Range.Font.ColorIndex = <span class="w3-pink">???</span> Then 
+ .Range.Text = ""
+End If
+End With
+Next para
+clearSelection
+End Sub
+</pre></code></p>
 
-<p>Does what is needed ...</p>
+<p>He replaces <span class="w3-pink">???</span> with the output of another Sub procedure.</p>
 
-<p>And life is good</p>
+<p><code lang="vb"><pre>Sub テスト25() ' inspect selection range font color index '
+MsgBox (selection.Range.Font.ColorIndex) ' tells you <span class="w3-white">???</span> '
+End Sub
+</pre></code></p>
+
+<p>And life is good.</p>
+
+<p>24 Apr 2018</p>
 
 <hr />
 <!--.w3-container--></div>
