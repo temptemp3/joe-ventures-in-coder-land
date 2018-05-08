@@ -47,7 +47,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
 <p>He creates Sub procedures.</p>
 
-<p><code lang="vb"><pre>Sub テスト23() ' remove range text with font color index equal to <span class="w3-white">???</span> '
+<p><code class="vb"><pre>Sub テスト23() ' remove range text with font color index equal to <span class="w3-white">???</span> '
 Dim para As Paragraph
 Documents(1).Activate
 For Each para In ActiveDocument.Paragraphs
@@ -63,7 +63,7 @@ End Sub
 
 <p>He replaces <span class="w3-pink">???</span> with the output of another Sub procedure.</p>
 
-<p><code lang="vb"><pre>Sub テスト25() ' inspect selection range font color index '
+<p><code class="vb"><pre>Sub テスト25() ' inspect selection range font color index '
 MsgBox (selection.Range.Font.ColorIndex) ' tells you <span class="w3-white">???</span> '
 End Sub
 </pre></code></p>
@@ -81,6 +81,7 @@ End Sub
 <div class="w3-container">
 <div class="w3-bar w3-white">
 <a href="index.html" class="w3-bar-item w3-button w3-mobile">index</a>
+<a href="joe-does-word-vba-deleting-empty-paragraphs-in-lists.html" class="w3-bar-item w3-button w3-mobile">joe-does-word-vba-deleting-empty-paragraphs-in-lists</a>
 <a href="joe-does-word-vba-removing-colored-text-from-document.html" class="w3-bar-item w3-button w3-mobile">joe-does-word-vba-removing-colored-text-from-document</a>
 </div> 
 <!--.w3-container--></div>

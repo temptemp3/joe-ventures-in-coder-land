@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>index | temptemp3.github.io/joe-ventures-in-coder-land</title>
+<title>joe does word vba deleting empty paragraphs in lists | temptemp3.github.io/joe-ventures-in-coder-land</title>
 
-<link rel="canonical" href="https://temptemp3.github.io/joe-ventures-in-coder-land/" />
+<link rel="canonical" href="https://temptemp3.github.io/joe-ventures-in-coder-land/joe-does-word-vba-deleting-empty-paragraphs-in-lists.html" />
 <link rel="stylesheet" href="css/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
@@ -35,23 +35,38 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <div class="w3-col l8 s12">
 <div class="w3-card-4 w3-margin w3-white">
 <div class="w3-container">
-<h1>index</h1>
+<h1>joe does word vba deleting empty paragraphs in lists</h1>
 
 <!--
-[index](index.html)
+[joe does word vba deleting empty paragraphs in lists](joe-does-word-vba-deleting-empty-paragraphs-in-lists.html)
 -->
 
 <hr />
 
-<p>Joe has a problem ...</p>
+<p>Joe wants to delete empty paragraphs in lists using Word VBA 8 May 2018</p>
 
-<p>He {wants to, must have} ... </p>
+<p>He creates a Sub procedure.</p>
 
-<p>So, he ventures into coder land ...</p>
+<p><code class="vb"><pre>Sub テスト30() ' delete any empty paragraphs found in lists
+Documents(1).Activate
+With ActiveDocument.Lists
+    MsgBox (.Count)
+    For list_index = 1 To .Count
+        With .Item(list_index).Range.Paragraphs
+            For paragraph_index = .Count To 1 Step -1
+                With .Item(paragraph_index).Range
+                    If .Characters.Count = 1 Then .Delete
+                End With
+            Next
+        End With
+    Next
+End With
+End Sub
+</pre></code></p>
 
-<p>Does what is needed ...</p>
+<p>And life is good.</p>
 
-<p>And life is good</p>
+<p>8 May 2018</p>
 
 <hr />
 <!--.w3-container--></div>
