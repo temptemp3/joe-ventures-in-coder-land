@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>joe does word vba removing colored text from document | temptemp3.github.io/joe-ventures-in-coder-land</title>
+<title>joe does word vba deleting empty paragraphs in lists | temptemp3.github.io/joe-ventures-in-coder-land</title>
 
-<link rel="canonical" href="https://temptemp3.github.io/joe-ventures-in-coder-land/joe-does-word-vba-removing-colored-text-from-document.html" />
+<link rel="canonical" href="https://temptemp3.github.io/joe-ventures-in-coder-land/joe-does-word-vba-deleting-empty-paragraphs-in-lists.html" />
 <link rel="stylesheet" href="css/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
@@ -35,42 +35,38 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <div class="w3-col l8 s12">
 <div class="w3-card-4 w3-margin w3-white">
 <div class="w3-container">
-<h1>joe does word vba removing colored text from document</h1>
+<h1>joe does word vba deleting empty paragraphs in lists</h1>
 
 <!--
-[joe does word vba removing colored text from document](joe-does-word-vba-removing-colored-text-from-document.html)
+[joe does word vba deleting empty paragraphs in lists](joe-does-word-vba-deleting-empty-paragraphs-in-lists.html)
 -->
 
 <hr />
 
-<p>Joe must have a way to remove text of any color from a Word Document using VBA 24 Apr 2018</p>
+<p>Joe wants to delete empty paragraphs in lists using Word VBA 8 May 2018</p>
 
-<p>He creates Sub procedures.</p>
+<p>He creates a Sub procedure.</p>
 
-<p><code class="vb"><pre>Sub テスト23() ' remove range text with font color index equal to <span class="w3-white">???</span> '
-Dim para As Paragraph
+<p><code class="vb"><pre>Sub テスト30() ' delete any empty paragraphs found in lists
 Documents(1).Activate
-For Each para In ActiveDocument.Paragraphs
-With para
-If .Range.Font.ColorIndex = <span class="w3-pink">???</span> Then 
- .Range.Text = ""
-End If
+With ActiveDocument.Lists
+    MsgBox (.Count)
+    For list_index = 1 To .Count
+        With .Item(list_index).Range.Paragraphs
+            For paragraph_index = .Count To 1 Step -1
+                With .Item(paragraph_index).Range
+                    If .Characters.Count = 1 Then .Delete
+                End With
+            Next
+        End With
+    Next
 End With
-Next para
-clearSelection
-End Sub
-</pre></code></p>
-
-<p>He replaces <span class="w3-pink">???</span> with the output of another Sub procedure.</p>
-
-<p><code class="vb"><pre>Sub テスト25() ' inspect selection range font color index '
-MsgBox (selection.Range.Font.ColorIndex) ' tells you <span class="w3-white">???</span> '
 End Sub
 </pre></code></p>
 
 <p>And life is good.</p>
 
-<p>24 Apr 2018</p>
+<p>8 May 2018</p>
 
 <hr />
 <!--.w3-container--></div>
