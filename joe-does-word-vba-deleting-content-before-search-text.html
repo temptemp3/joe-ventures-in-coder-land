@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>index | temptemp3.github.io/joe-ventures-in-coder-land</title>
+<title>joe does word vba deleting content before search text | temptemp3.github.io/joe-ventures-in-coder-land</title>
 
-<link rel="canonical" href="https://temptemp3.github.io/joe-ventures-in-coder-land/" />
+<link rel="canonical" href="https://temptemp3.github.io/joe-ventures-in-coder-land/joe-does-word-vba-deleting-content-before-search-text.html" />
 <link rel="stylesheet" href="css/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
@@ -35,23 +35,41 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <div class="w3-col l8 s12">
 <div class="w3-card-4 w3-margin w3-white">
 <div class="w3-container">
-<h1>index</h1>
+<h1>joe does word vba deleting content before search text</h1>
 
 <!--
-[index](index.html)
+[joe does word vba deleting content before search text](joe-does-word-vba-deleting-content-before-search-text.html)
 -->
 
 <hr />
 
-<p>Joe has a problem ...</p>
+<p>Joe wants to remove content appearing before a specific line in a document using Word VBA 8 May 2018</p>
 
-<p>He {wants to, must have} ... </p>
+<p>He creates a Sub procedure.</p>
 
-<p>So, he ventures into coder land ...</p>
+<p><code class="vb"><pre>
+Public Sub テスト31() ' delete content before search text
+Documents(1).Activate
+<span class="w3-green">clearSelection</span> ' helper procedure
+With selection.Find 
+.ClearFormatting
+.Font.Bold = True
+<span class="w3-white">.Execute FindText:="<span class="w3-pink">???</span>", Format:=True, _</span>
+Forward:=True
+End With
+With selection 
+<span class="w3-white">.MoveUp Unit:=wdLine, Count:=<span class="w3-pink">●</span>, Extend:=wdExtend</span> ' may have to move the selection up a large number of lines
+<span class="w3-white">.MoveEnd Unit:=wdLine, Count:=<span class="w3-pink">▲</span></span> ' may have to move the end down 1 line
+.Delete 
+End With 
+End Sub 
+</pre></code></p>
 
-<p>Does what is needed ...</p>
+<p>He has <span class="w3-green">clearSelection</span> and replaces <span class="w3-pink">???</span>, <span class="w3-pink">●</span>, and <span class="w3-pink">▲</span> with appropriate values.</p>
 
-<p>And life is good</p>
+<p>And life is good.</p>
+
+<p>10 May 2018</p>
 
 <hr />
 <!--.w3-container--></div>
